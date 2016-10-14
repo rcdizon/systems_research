@@ -1,0 +1,121 @@
+<uml:Model name="Super Simple Model" xmi:id="eee_1045467100313_135436_1" xmi:type="uml:Model">
+<ownedComment body="Author:cyber.
+Created:7/22/16 11:17 AM.
+Title:.
+Comment:.
+" xmi:id="_18_3_63a0216_1469200649832_491339_13467" xmi:type="uml:Comment">
+<annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
+</ownedComment>
+<xmi:Extension extender="MagicDraw UML 18.3">
+<modelExtension>
+<ownedDiagram name="Super Simple Model" ownerOfDiagram="eee_1045467100313_135436_1" visibility="public" xmi:id="_18_3_63a0216_1469200672013_552006_13471" xmi:type="uml:Diagram">
+<xmi:Extension extender="MagicDraw UML 18.3">
+<diagramRepresentation>
+<DiagramRepresentationObject ID="_18_3_63a0216_1469200672044_686979_13492" diagramStyleID="_18_3_63a0216_1469200672038_700037_13472" id="_dR1t0FAfEeaBeLk2qcXt2w" initialFrameSizeSet="true" requiredFeature="com.nomagic.magicdraw.plugins.impl.sysml#SysML;UML_Standard_Profile.mdzip;MD_customization_for_SysML.mdzip" type="SysML Block Definition Diagram" umlType="Class Diagram" version="2.0">
+<diagramContents contentHash="ea92effe-b6aa-4323-9f13-edad422cb766" exporterName="MagicDraw UML" exporterVersion="18.3" id="_dR1t0VAfEeaBeLk2qcXt2w">
+<binaryObject id="_dR1t0lAfEeaBeLk2qcXt2w" streamContentID="BINARY-ad1ee126-b889-4395-9936-f39bd828a0ac" type="binary:StreamIdentityBinaryObject"/>
+<usedObjects href="#_18_3_63a0216_1469200694681_278144_13553"/>
+<usedObjects href="#_18_3_63a0216_1469200672013_552006_13471"/>
+<usedObjects href="#_18_3_63a0216_1469200874291_452936_13745"/>
+<usedObjects href="#_18_3_63a0216_1469200903692_208487_13820"/>
+<usedObjects href="#_18_3_63a0216_1469200895516_585363_13793"/>
+<usedObjects href="#_18_3_63a0216_1469200903691_146401_13818"/>
+<usedObjects href="#_18_3_63a0216_1469200903691_266811_13819"/>
+<usedObjects href="#_18_3_63a0216_1469200680699_664394_13507"/>
+<usedObjects href="#_18_3_63a0216_1469200895516_300022_13792"/>
+<usedObjects href="#_18_3_63a0216_1469200895517_552256_13794"/>
+<usedElements>_18_3_63a0216_1469200895516_585363_13793</usedElements>
+<usedElements>_18_3_63a0216_1469200680699_664394_13507</usedElements>
+<usedElements>_18_3_63a0216_1469200895517_552256_13794</usedElements>
+<usedElements>_18_3_63a0216_1469200672013_552006_13471</usedElements>
+<usedElements>_18_3_63a0216_1469200903692_208487_13820</usedElements>
+<usedElements>_18_3_63a0216_1469200895516_300022_13792</usedElements>
+<usedElements>_18_3_63a0216_1469200903691_146401_13818</usedElements>
+<usedElements>_18_3_63a0216_1469200874291_452936_13745</usedElements>
+<usedElements>_18_3_63a0216_1469200694681_278144_13553</usedElements>
+<usedElements>_18_3_63a0216_1469200903691_266811_13819</usedElements>
+</diagramContents>
+</DiagramRepresentationObject>
+</diagramRepresentation>
+</xmi:Extension>
+</ownedDiagram>
+</modelExtension>
+</xmi:Extension>
+<packagedElement name="Microcontroller" xmi:id="_18_3_63a0216_1469200680699_664394_13507" xmi:type="uml:Class">
+<ownedAttribute aggregation="composite" name="p1" visibility="public" xmi:id="_18_3_63a0216_1469200980193_96427_14005" xmi:type="uml:Port"/>
+</packagedElement>
+<packagedElement name="Magnetometer" xmi:id="_18_3_63a0216_1469200694681_278144_13553" xmi:type="uml:Class">
+<ownedAttribute aggregation="composite" name="p1" visibility="public" xmi:id="_18_3_63a0216_1469200970567_151269_13947" xmi:type="uml:Port"/>
+<ownedAttribute aggregation="composite" name="p2" visibility="public" xmi:id="_18_3_63a0216_1469200974109_782280_13973" xmi:type="uml:Port"/>
+</packagedElement>
+<packagedElement name="Autopilot" xmi:id="_18_3_63a0216_1469200874291_452936_13745" xmi:type="uml:Class">
+<xmi:Extension extender="MagicDraw UML 18.3">
+<modelExtension>
+<ownedDiagram context="_18_3_63a0216_1469200874291_452936_13745" name="Autopilot Connectivity" ownerOfDiagram="_18_3_63a0216_1469200874291_452936_13745" visibility="public" xmi:id="_18_3_63a0216_1469200938400_364857_13852" xmi:type="uml:Diagram">
+<xmi:Extension extender="MagicDraw UML 18.3">
+<diagramRepresentation>
+<DiagramRepresentationObject ID="_18_3_63a0216_1469200938416_996414_13872" diagramStyleID="_18_3_63a0216_1469200672038_700037_13472" id="_E-KSEFAgEeaBeLk2qcXt2w" initialFrameSizeSet="true" requiredFeature="com.nomagic.magicdraw.plugins.impl.sysml#SysML;MD_customization_for_SysML.mdzip;UML_Standard_Profile.mdzip" type="SysML Internal Block Diagram" umlType="Composite Structure Diagram" version="2.0">
+<diagramContents contentHash="a396a683-fbe0-42bb-914f-e1f4e5b620f4" exporterName="MagicDraw UML" exporterVersion="18.3" id="_E-KSEVAgEeaBeLk2qcXt2w">
+<binaryObject id="_E-KSElAgEeaBeLk2qcXt2w" streamContentID="BINARY-f96fb20d-7141-448c-9c86-e5131be8d2a8" type="binary:StreamIdentityBinaryObject"/>
+<usedObjects href="#_18_3_63a0216_1469201022565_233181_14046"/>
+<usedObjects href="#_18_3_63a0216_1469200938400_364857_13852"/>
+<usedObjects href="#_18_3_63a0216_1469200694681_278144_13553"/>
+<usedObjects href="#_18_3_63a0216_1469200997167_300758_14034"/>
+<usedObjects href="#_18_3_63a0216_1469200974109_782280_13973"/>
+<usedObjects href="#_18_3_63a0216_1469200895516_585363_13793"/>
+<usedObjects href="#_18_3_63a0216_1469200903691_266811_13819"/>
+<usedObjects href="#_18_3_63a0216_1469200980193_96427_14005"/>
+<usedObjects href="#_18_3_63a0216_1469200680699_664394_13507"/>
+<usedObjects href="#_18_3_63a0216_1469200970567_151269_13947"/>
+<usedElements>_18_3_63a0216_1469200895516_585363_13793</usedElements>
+<usedElements>_18_3_63a0216_1469200680699_664394_13507</usedElements>
+<usedElements>_18_3_63a0216_1469200980193_96427_14005</usedElements>
+<usedElements>_18_3_63a0216_1469200938400_364857_13852</usedElements>
+<usedElements>_18_3_63a0216_1469200970567_151269_13947</usedElements>
+<usedElements>_18_3_63a0216_1469201022565_233181_14046</usedElements>
+<usedElements>_18_3_63a0216_1469200997167_300758_14034</usedElements>
+<usedElements>_18_3_63a0216_1469200694681_278144_13553</usedElements>
+<usedElements>_18_3_63a0216_1469200903691_266811_13819</usedElements>
+<usedElements>_18_3_63a0216_1469200974109_782280_13973</usedElements>
+</diagramContents>
+</DiagramRepresentationObject>
+</diagramRepresentation>
+</xmi:Extension>
+</ownedDiagram>
+</modelExtension>
+</xmi:Extension>
+<ownedAttribute aggregation="composite" association="_18_3_63a0216_1469200895516_300022_13792" name="microcontroller" type="_18_3_63a0216_1469200680699_664394_13507" visibility="public" xmi:id="_18_3_63a0216_1469200895516_585363_13793" xmi:type="uml:Property"/>
+<ownedAttribute aggregation="composite" association="_18_3_63a0216_1469200903691_146401_13818" name="magnetometer" type="_18_3_63a0216_1469200694681_278144_13553" visibility="public" xmi:id="_18_3_63a0216_1469200903691_266811_13819" xmi:type="uml:Property"/>
+</packagedElement>
+<packagedElement xmi:id="_18_3_63a0216_1469200895516_300022_13792" xmi:type="uml:Association">
+<memberEnd xmi:idref="_18_3_63a0216_1469200895516_585363_13793"/>
+<memberEnd xmi:idref="_18_3_63a0216_1469200895517_552256_13794"/>
+<ownedEnd association="_18_3_63a0216_1469200895516_300022_13792" type="_18_3_63a0216_1469200874291_452936_13745" visibility="public" xmi:id="_18_3_63a0216_1469200895517_552256_13794" xmi:type="uml:Property"/>
+</packagedElement>
+<packagedElement xmi:id="_18_3_63a0216_1469200903691_146401_13818" xmi:type="uml:Association">
+<memberEnd xmi:idref="_18_3_63a0216_1469200903691_266811_13819"/>
+<memberEnd xmi:idref="_18_3_63a0216_1469200903692_208487_13820"/>
+<ownedEnd association="_18_3_63a0216_1469200903691_146401_13818" type="_18_3_63a0216_1469200874291_452936_13745" visibility="public" xmi:id="_18_3_63a0216_1469200903692_208487_13820" xmi:type="uml:Property"/>
+</packagedElement>
+<packagedElement name="I2C Protocol" xmi:id="_18_3_63a0216_1469200997167_300758_14034" xmi:type="uml:InformationFlow">
+<informationSource xmi:idref="_18_3_63a0216_1469200970567_151269_13947"/>
+<informationTarget xmi:idref="_18_3_63a0216_1469200980193_96427_14005"/>
+<ownedComment body="I2C Protocol" xmi:id="_18_3_63a0216_1469201016112_420688_14041" xmi:type="uml:Comment">
+<annotatedElement xmi:idref="_18_3_63a0216_1469200997167_300758_14034"/>
+</ownedComment>
+</packagedElement>
+<packagedElement name="I2C Protocol" xmi:id="_18_3_63a0216_1469201022565_233181_14046" xmi:type="uml:InformationFlow">
+<informationSource xmi:idref="_18_3_63a0216_1469200980193_96427_14005"/>
+<informationTarget xmi:idref="_18_3_63a0216_1469200974109_782280_13973"/>
+<ownedComment body="I2C Protocol" xmi:id="_18_3_63a0216_1469201041936_956421_14055" xmi:type="uml:Comment">
+<annotatedElement xmi:idref="_18_3_63a0216_1469201022565_233181_14046"/>
+</ownedComment>
+</packagedElement>
+<profileApplication xmi:id="_18_3_63a0216_1469200649831_74770_13466" xmi:type="uml:ProfileApplication">
+<appliedProfile href="http://www.omg.org/spec/SysML/20120401/SysML.xmi#_SysML__0">
+<xmi:Extension extender="MagicDraw UML 18.3">
+<referenceExtension originalID="_11_5EAPbeta_be00301_1147434586638_637562_1900" referentPath="SysML" referentType="Profile"/>
+</xmi:Extension>
+</appliedProfile>
+</profileApplication>
+</uml:Model>, <Model ID="eee_1045467100313_135436_1" id="eee_1045467100313_135436_1" name="Super Simple Model" version="2.0" visibility="public"/>
