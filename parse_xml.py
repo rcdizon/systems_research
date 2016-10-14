@@ -10,8 +10,24 @@ import sys
 
 
 f = open('output.txt', 'r')
-while(f.readline()):
-    line = f.readline()
+for line in f:
     if "<packagedElem" in line: 
-        print "Found an element!"
-
+        if "uml:Class" in line:
+            name = ""
+            owned_attributes = []
+            print "Found a class!"
+        elif "uml:InformationFlow" in line:
+            name = ""
+            source = ""
+            target = ""
+            print "Found InFlow!"
+        elif "uml:Property" in line:
+            name = ""
+            print "Found a property!"
+        elif "uml:Association" in line:
+            member_end = ""
+            print "Found an association!"
+        elif "uml:Port:" in line:
+            name = ""
+            print "Found a port!"
+f.close()
