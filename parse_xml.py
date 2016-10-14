@@ -32,11 +32,25 @@ def add_object(line, name):
     end_index = line.index("\"", beg_index)
     obj_entry = line[beg_index : end_index]
     object_dict[obj_entry] = name
-    
+
+used_object_dict = {}
+
+def used_add_object(line, name):
+    global used_object_dict
+    beg_index = line.index("xmi:id=\"") + 8
+    end_index = line.index("\"", beg_index)
+    obj_entry = line[beg_index : end_index]
+    used_object_dict[obj_entry] = name
+
+def get_href(line):
+    beg_index = line.index("href=\"") + 7 # Must account for leading ref characters
+    end_index = line.index("\"", beg_index)
+    xmi_id = line[beg_index : end_index]
+    return xmi_id
+
 f = open('output.txt', 'r')
 for line in f:
     if "<packagedElem" in line: 
-        information = ""
 
         if "uml:Class" in line:
             uml_type = "UML:Class"
@@ -80,5 +94,24 @@ for line in f:
             name = get_name(line)
             print name, uml_type
         
-        #print information
+f.close()
+
+f = open('output.txt', 'r')
+for line in f:
+   if "xmi:id=\"" in line and "uml:Property" in line:
+        name = "umi:Property"
+        used_add_object(line, name)        
+   if "xmi:id=\"" in line and "uml:Association" in line:
+        name = "umi:Association"
+        used_add_object(line, name)        
+   if "xmi:id=\"" in line and "name=\"" in line:
+        name = get_name(line)
+        used_add_object(line, name)        
+f.close()
+
+f = open('output.txt', 'r')
+print "\nUsed objects:"
+for line in f:
+   if "<usedObjects" in line:
+        print used_object_dict[get_href(line)]
 f.close()
