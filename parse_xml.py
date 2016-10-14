@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 
-import sys
-#from bs4 import BeautifulSoup
+# Richard Dizon
+# parse_xml.py
+# 10/14/16
 
-#soup = BeautifulSoup(open(sys.argv[1]), 'lxml')
-#model_location = lambda x: x.name == "Model"
-#model = soup(model_location)
-#print(model)
+import sys
 
 def get_name(line):
     beg_index = line.index("name=\"")  + 6
@@ -15,11 +13,26 @@ def get_name(line):
     return name
 
 def get_xmi_type(line):
-    beg_index = line.index("xmi:type=\"")  + 14
+    beg_index = line.index("xmi:type=\"")  + 14 # Must account for leading type info
     end_index = line.index("\"", beg_index)
     typ = line[beg_index : end_index]
     return typ
 
+object_dict = {}
+
+def get_xmi_id(line):
+    beg_index = line.index("xmi:idref=\"") + 11
+    end_index = line.index("\"", beg_index)
+    xmi_id = line[beg_index : end_index]
+    return xmi_id
+
+def add_object(line, name):
+    global object_dict
+    beg_index = line.index("xmi:id=\"") + 8
+    end_index = line.index("\"", beg_index)
+    obj_entry = line[beg_index : end_index]
+    object_dict[obj_entry] = name
+    
 f = open('output.txt', 'r')
 for line in f:
     if "<packagedElem" in line: 
@@ -33,24 +46,34 @@ for line in f:
             while not "</packagedElem" in next_line:
                 if "<ownedAttr" in next_line:
                     owned_attributes.append(get_xmi_type(next_line) + "," + get_name(next_line))
+                    add_object(next_line, name)
+                #if "<usedObjects" in next_line:
+                    #add_object(line, name)
                 next_line = next(f)
             print name, uml_type, "Contains:", owned_attributes
 
         elif "uml:InformationFlow" in line:
-            source = ""
-            target = ""
+            source = "Source:"
+            target = "Target:"
             uml_type = "UML:InformationFlow"
             name = get_name(line)
-            print name, uml_type
+            next_line = next(f)
+            while not "</packagedElem" in next_line:
+                if "<informationSource" in next_line:
+                    source += (object_dict[get_xmi_id(next_line)])
+                if "<informationTarget" in next_line:
+                    target += (object_dict[get_xmi_id(next_line)])
+                next_line = next(f)
+
+            print name, uml_type, source, target
 
         elif "uml:Property" in line:
             uml_type = "UML:Property"
-            name = get_name(line)
-            print name, uml_type
+            print uml_type
 
         elif "uml:Association" in line:
-            member_end = ""
-            print "Found an association!"
+            uml_type = "UML:Association"
+            print uml_type
 
         elif "uml:Port:" in line:
             uml_type = "UML:Port"
